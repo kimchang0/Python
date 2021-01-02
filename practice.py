@@ -185,6 +185,99 @@
 
 '''210101'''
 
+# # 문자열
+# sentence = "나는 소년입니다"
+# print(sentence)
+
+# sentence2 = "파이썬은 쉬워요"
+# print(sentence2)
+
+# sentence3 = """
+# 나는 소년이고,
+# 파이썬은 쉬워요
+# """
+# print(sentence3)
+
+# 슬라이싱
+# jumin = "990120-1234567"
+
+
+# print("성별 : " + jumin[7])
+# print("연 : " + jumin[0:2]) # 0번째 자리부터 2번째 자리 사이의 값을 가져옴
+# print("월 : " + jumin[2:4])
+# print("일 : " + jumin[4:6])
+# print("생년월일 : " + jumin[:6]) # 콜론 앞에 숫자가 없으면 처음부터 6번째 전까지 가져옴
+# print("뒤 7자리 : " + jumin[7:]) # 콜론 뒤에 숫자가 없으면 지정한 숫자부터 끝가지 가져옴
+# print("뒤 7자리 (뒤에부터) : " + jumin[-7:]) # 뒤에 7번째부터 시작해서 뒤로 끝까지
+
+# 문자열 처리함수
+# python = "Python is Amazing"
+# print(python.lower())
+# print(python.upper())
+# print(python[0].isupper())
+# print(len(python))
+# print(python.replace("Python", "Java"))
+
+# index = python.index("n")
+# print(index)
+# index = python.index("n", index + 1)
+# print(index)
+
+# print(python.find("Java")) # find는 내가 찾는 값이 없으면 -1을 반환하고
+# print(python.index("Java")) # index는 내가 찾는 값이 없으면 오류가 난다.
+# print("hi")
+
+# print(python.count("n"))
+
+# 문자열 포맷
+print("a" + "b")
+print("a", "b")
+
+print("나는 %d살입니다." % 20)
+print("나는 %s을 좋아해요." % "파이썬")
+print("Apple은 %c로 시작해요." % "A")
+# d는 정수형, s는 문자열, c는 문자 하나이지만, s형으로 쓰면 무엇이든 상관없이 쓸 수 있다.
+
+print("나는 %s살입니다." % 20)
+print("나는 %s색과 %s색을 좋아해요." % ("파란", "빨간"))
+
+print("나는 {}살입니다." .format(20))
+print("나는 {}색과 {}색을 좋아해요" .format("파란", "빨간"))
+print("나는 {1}색과 {0}색을 좋아해요" .format("파란", "빨간"))
+'''210102'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
