@@ -218,58 +218,217 @@
 # print(len(python))
 # print(python.replace("Python", "Java"))
 
-# index = python.index("n")
+# index = python.index("n") # 몇번째에 n이 포함되는지 위치를 물어봄
 # print(index)
-# index = python.index("n", index + 1)
+# index = python.index("n", index + 1) # 다음 n은 어디인지 위치를 물어봄
 # print(index)
 
-# print(python.find("Java")) # find는 내가 찾는 값이 없으면 -1을 반환하고
-# print(python.index("Java")) # index는 내가 찾는 값이 없으면 오류가 난다.
+# print(python.find("Java")) # find는 내가 찾는 값이 있으면 위치를, 없으면 -1을 반환하고
+# print(python.index("Java")) # index는 내가 찾는 값이 있으면 위치를, 없으면 오류가 난다.
 # print("hi")
 
-# print(python.count("n"))
+# print(python.count("n")) # n의 개수를 세는 함수
 
 # 문자열 포맷
-print("a" + "b")
-print("a", "b")
+# print("a" + "b")
+# print("a", "b")
 
-print("나는 %d살입니다." % 20)
-print("나는 %s을 좋아해요." % "파이썬")
-print("Apple은 %c로 시작해요." % "A")
-# d는 정수형, s는 문자열, c는 문자 하나이지만, s형으로 쓰면 무엇이든 상관없이 쓸 수 있다.
+# print("나는 %d살입니다." % 20)
+# print("나는 %s을 좋아해요." % "파이썬")
+# print("Apple은 %c로 시작해요." % "A")
+# # d는 정수형, s는 문자열, c는 문자 하나이지만, s형으로 쓰면 무엇이든 상관없이 쓸 수 있다.
 
-print("나는 %s살입니다." % 20)
-print("나는 %s색과 %s색을 좋아해요." % ("파란", "빨간"))
+# print("나는 %s살입니다." % 20)
+# print("나는 %s색과 %s색을 좋아해요." % ("파란", "빨간"))
 
-print("나는 {}살입니다." .format(20))
-print("나는 {}색과 {}색을 좋아해요" .format("파란", "빨간"))
-print("나는 {1}색과 {0}색을 좋아해요" .format("파란", "빨간"))
-'''210102'''
+# print("나는 {}살입니다." .format(20))
+# print("나는 {}색과 {}색을 좋아해요" .format("파란", "빨간"))
+# print("나는 {0}색과 {1}색을 좋아해요" .format("파란", "빨간")) # 중괄호에 번호를 적으면 인자값의 번호대로 입력됨
+# print("나는 {1}색과 {0}색을 좋아해요" .format("파란", "빨간")) # 중괄호에 번호를 적으면 인자값의 번호대로 입력됨
+# '''210102'''
+# print("나는 {age}살이며, {color}색을 좋아해요." .format(age = 20, color = "빨간")) # print 안에 변수를 선언하는 것 처럼 사용함
+# print("나는 {age}살이며, {color}색을 좋아해요." .format(color = "빨간", age = 20)) # 변수의 순서가 바뀌어도 출력은 동일하지만 출력하는 곳의 순서가 바뀌면 출력은 달라짐
 
+# age = 20
+# color = "빨간"
 
+# print(f"나는 {age}살이며, {color}색을 좋아해요.") # python 버전 3.6 이상부터 사용 가능한 기능으로 실제 변수를 가져와서 값을 출력함
 
+# 탈출문자
+# print("백문이 불여일견 \n백견이 불여일타") # 줄바꿈 옵션
 
+# print("저는 \"김창영\" 입니다.") # 큰 따옴표 표현옵션 1
+# print('저는 "김창영" 입니다.') # 큰 따옴표 표현옵션 2
 
+# print("c:\\work\\working\\start") # \표현옵션
 
+# print("Red Apple \rPine") # 커서를 앞으로 옮겨 덮어쓰기 함
 
+# print("Redd\b Apple") # 한 글자를 지우는 옵션
 
+# print("Red\tApple") # 한 번 tab누르는 옵션
 
+# 퀴즈
+# ''' Quiz) 사이트별로 비밀번호를 만들어 주는 프로그램을 작성하시오.
 
+# 예) http://naver.com
 
+# 규칙1 : http:// 부분은 제외 => naver.com
+# 규칙2 : 처음 만나는 점(.) 이후 부분은 제외 => naver
+# 규칙3 : 남은 글자 중 처음 세자리 + 글자 갯수 + 글자 내 e 갯수 + !로 구성
 
+# 예) 생성된 비밀번호 : nav51!'''
 
+# url = "http://naver.com"
+# memory = url.replace("http://", "")
+# memory = memory[:memory.find(".")]
+# password = memory[:3] + str(len(memory)) + str(memory.count("e")) + "!"
 
+# print(f"{url}의 비밀번호는 {password}입니다.")
 
+# 리스트
+# subway1 = 10
+# subway2 = 20
+# subway3 = 30
 
+# subway = [10, 20, 30]
+# print(subway)
 
+# subway = ["유재석", "조세호", "박명수"]
+# print(subway)
 
+# print(subway.index("조세호"))
 
+# subway.append("하하")
+# print(subway)
 
+# subway.insert(1,"정형돈")
+# print(subway)
 
+# print(subway.pop())
+# print(subway)
 
+# print(subway.pop())
+# print(subway)
 
+# print(subway.pop())
+# print(subway)
 
+# subway.append("유재석")
+# print(subway)
+# print(subway.count("유재석"))
 
+# num_list = [5, 2, 4, 3, 1]
+# num_list.sort()
+# print(num_list)
+
+# num_list.reverse()
+# print(num_list)
+
+# num_list.clear()
+# print(num_list)
+
+# num_list = [5, 2, 4, 3, 1]
+# mix_list = ["조세호", 20, True]
+
+# num_list.extend(mix_list)
+# print(num_list)
+
+# 사전
+# cabinet = {3:"유재석", 100:"김태호"}
+# print(cabinet[3])
+# print(cabinet[100])
+
+# print(cabinet.get(3))
+# print(cabinet.get(5, "사용가능"))
+
+# print(3 in cabinet)
+# print(5 in cabinet)
+
+# cabinet = {"A-3":"유재석", "B-100":"김태호"}
+# print(cabinet["A-3"])
+# print(cabinet["B-100"])
+
+# cabinet["C-20"] = "조세호"
+# print(cabinet.get("C-20"))
+
+# del cabinet["A-3"]
+# print(cabinet)
+# print(cabinet.keys())
+# print(cabinet.values())
+# print(cabinet.items())
+
+# cabinet.clear()
+# print(cabinet)
+
+# 튜플
+# menu = ("돈까스", "치즈까스")
+# print(menu[0])
+# print(menu[1])
+
+# name = "김종국"
+# age = 20
+# hobby = "코딩"
+# print(name, age, hobby)
+
+# name, age, hobby = "김종국", 20, "코딩"
+# print(name, age, hobby)
+
+# (name, age, hobby) = ("김종국", 20, "코딩")
+# print(name, age, hobby)
+
+# 세트 (집합) set 중복없고 순서도 없음
+# my_set = {1,2,3,3,3}
+# print(my_set)
+
+# java = {"유재석", "김태호", "양세형"}
+# python = set(["유재석", "박명수"])
+
+# print(java & python)
+# print(java.intersection(python))
+
+# print(java | python)
+# print(java.union(python))
+
+# print(java - python)
+# print(java.difference(python))
+
+# python.add("김태호")
+# print(python)
+
+# java.remove("김태호")
+# print(java)
+
+# 자료구조의 변경
+# menu = {"커피", "우유", "주스"}
+# print(menu, type(menu))
+
+# menu = list(menu)
+# print(menu, type(menu))
+
+# menu = tuple(menu)
+# print(menu, type(menu))
+
+# menu = set(menu)
+# print(menu, type(menu))
+
+# 퀴즈
+''' Quiz) 당신의 학교에서는 파이썬 코딩 대회를 주최합니다.
+참석률을 높이기 위해 댓글 이벤트를 진행하기로 하였습니다.
+댓글 작성자들 중에 추첨을 통해 1명은 치킨, 3명은 커피 쿠폰을 받게 됩니다.
+추첨 프로그램을 작성하시오.
+
+조건1 : 편의상 댓글은 20명이 작성하였고 아이디는 1~20이라고 가정
+조건2 : 댓글 내용과 상관 없이 무작위로 추첨하되 중복 불가
+조건3 : random 모듈의 shuffle과 sample을 활용
+
+(출력 예제)
+-- 당첨자 발표--
+치킨 당첨자 : 1
+커피 당첨자 : [2, 3, 4]
+-- 축하합니다 --'''
+
+from random import *
 
 
 
