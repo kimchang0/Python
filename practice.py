@@ -430,14 +430,14 @@
 
 from random import *
 
-id = range(1, 21)
-id = list(id)
-shuffle(id)
-pick = sample(id, 4)
+id = range(1, 21) # range 함수를 이용해 1 ~ 20 까지의 숫자들을 생성함
+id = list(id) # id는 range 함수이므로 list로 변환함
+shuffle(id) # 현재의 id는 1부터 20까지 나열되어있는 형태이므로 shuffle 함수를 통해 섞어줌
+pick = sample(id, 4) # pick 변수에 id리스트에서 임의로 뽑은 4개의 숫자를 저장함
 
 print("-- 당첨자 발표--")
-print("치킨 당첨자 : {0}".format(pick[0]))
-print("커피 당첨자 : {0}".format(pick[1:]))
+print("치킨 당첨자 : {0}".format(pick[0])) # pick의 첫 번째를 치킨 당첨자로 정함
+print("커피 당첨자 : {0}".format(pick[1:])) # pick의 2, 3, 4번째를 커피 당첨자로 정함
 print("-- 축하합니다 --")
 
 
