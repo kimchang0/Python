@@ -432,7 +432,7 @@ from random import *
 
 id = range(1, 21) # range 함수를 이용해 1 ~ 20 까지의 숫자들을 생성함
 id = list(id) # id는 range 함수이므로 list로 변환함
-shuffle(id) # 현재의 id는 1부터 20까지 나열되어있는 형태이므로 shuffle 함수를 통해 섞어줌
+shuffle(id) # 현재의 id는 1부터 20까지 나열되어있는 형태이므로 shuffle 함수를 이용해 섞어줌
 pick = sample(id, 4) # pick 변수에 id리스트에서 임의로 뽑은 4개의 숫자들을 저장함
 
 print("-- 당첨자 발표--")
