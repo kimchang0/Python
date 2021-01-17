@@ -428,17 +428,177 @@
 커피 당첨자 : [2, 3, 4]
 -- 축하합니다 --'''
 
-from random import *
+# from random import *
 
-id = range(1, 21) # range 함수를 이용해 1 ~ 20 까지의 숫자들을 생성함
-id = list(id) # id는 range 함수이므로 list로 변환함
-shuffle(id) # 현재의 id는 1부터 20까지 나열되어있는 형태이므로 shuffle 함수를 이용해 섞어줌
-pick = sample(id, 4) # pick 변수에 id리스트에서 임의로 뽑은 4개의 숫자들을 저장함
+# id = range(1, 21) # range 함수를 이용해 1 ~ 20 까지의 숫자들을 생성함
+# id = list(id) # id는 range 함수이므로 list로 변환함
+# shuffle(id) # 현재의 id는 1부터 20까지 나열되어있는 형태이므로 shuffle 함수를 이용해 섞어줌
+# pick = sample(id, 4) # pick 변수에 id리스트에서 임의로 뽑은 4개의 숫자들을 저장함
 
-print("-- 당첨자 발표--")
-print("치킨 당첨자 : {0}".format(pick[0])) # pick의 첫 번째를 치킨 당첨자로 정함
-print("커피 당첨자 : {0}".format(pick[1:])) # pick의 2, 3, 4번째를 커피 당첨자로 정함
-print("-- 축하합니다 --")
+# print("-- 당첨자 발표--")
+# print("치킨 당첨자 : {0}".format(pick[0])) # pick의 첫 번째를 치킨 당첨자로 정함
+# print("커피 당첨자 : {0}".format(pick[1:])) # pick의 2, 3, 4번째를 커피 당첨자로 정함
+# print("-- 축하합니다 --")
+'''20210119'''
+
+# if문 (조건문)
+# weather = input("오늘 날씨는 어때요? ")
+# if weather == "비" or weather == "눈":
+#     print("우산을 챙기세요")
+# elif weather == "미세먼지":
+#     print("마스크를 챙기세요")
+# else:
+#     print("준비물이 필요없어요.")
+
+# temp = int(input("기온은 어때요? "))
+# if 30 <= temp:
+#     print("너무 더워요. 나가지 마세요")
+# elif 10 <= temp and temp < 30:
+#     print("괜찮은 날씨에요.")
+# elif 0 <= temp < 10:
+#     print("외투를 챙기세요.")
+# else:
+#     print("너무 추워요. 나가지 마세요.")
+
+# for문 (반복문 1)
+# print("대기번호 : 1")
+# print("대기번호 : 2")
+# print("대기번호 : 3")
+# print("대기번호 : 4")
+# print("대기번호 : 5")
+
+# for waiting_no in [0,1,2,3,4]:
+#     print("대기번호 : {0}".format(waiting_no))
+
+# for waiting_no in range(1, 6):
+#     print("대기번호 : {0}".format(waiting_no))
+
+# starbucks = ["아이언맨", "토르", "아이엠 그루트"]
+# for customer in starbucks:
+#     print("{0}, 고객님 커피가 준비되었습니다.".format(customer))
+
+# while문(반복문 2)
+# customer = "토르"
+# index = 5
+# while index >= 1:
+#     print("{0}, 손님 커피가 준비 되었습니다. {1}번 남았어요.".format(customer, index))
+#     index -= 1
+#     if index == 0:
+#         print("커피는 폐기처분 되었습니다.")
+
+# customer = "아이언맨"
+# index = 1
+# while True:
+#     print("{0}, 손님 커피가 준비 되었습니다. {1}번 불렀어요.".format(customer, index))
+#     index += 1
+
+# customer = "토르"
+# person = "Unknown"
+
+# while person != customer:
+#     print("{0} 손님 커피가 준비 되었습니다.".format(customer))
+#     person = input("이름이 어떻게 되세요? ")
+#     if person == customer:
+#         print("{0} 고객님 주문하신 커피 나왔습니다.".format(person))
+#     elif person != customer:
+#         print("{0} 고객님의 커피는 준비 중이니 잠시만 기다려주세요.".format(person))
+
+
+# continue와 break
+# absent = [2, 5]
+# no_book = [7] #책이 없음
+# for  student in range(1, 11): #1번부터 10번
+#     if student in absent:
+#         continue
+#     elif student in no_book:
+#         print("오늘 수업 여기까지. {0}번은 교무실로 따라와".format(student))
+#         break
+#     print("{0}번 책을 읽어봐".format(student))
+
+# 한 줄 for문(반복문 3)
+# students = [1, 2, 3, 4, 5]
+# print(students)
+# students = [i+100 for i in students]
+# print(students)
+
+# students = ["Iron man", "Thor", "Groot"]
+# print(students)
+# students = [len(i) for i in students]
+# print(students)
+
+# students = ["Iron man", "Thor", "Groot"]
+# students = [i.upper() for i in students]
+# print(students)
+# students = [i.lower() for i in students]
+# print(students)
+
+# 퀴즈
+''' 당신은 코코아 서비스를 이용하는 택시 기사님입니다.
+50명의 승객과 매칭 기회가 있을 때, 총 탑승 승객 수를 구하는 프로그램을 작성하시오.
+
+조건1 : 승객별 운행 소요 시간은 5분 ~ 50분 사이의 난수로 정해집니다.
+조건2 : 당신은 소요 시간 5분 ~ 15분 사이의 승객만 매칭해야 합니다.
+
+(출력문 예제)
+[O] 1번째 손님 (소요시간 : 15분)
+[ ] 2번째 손님 (소요시간 : 50분)
+[O] 3번째 손님 (소요시간 : 5분)
+...
+[ ] 50번째 손님 (소요시간 : 16분)
+
+총 탑승 승객 : 2 분'''
+
+# from random import *
+# # 내 풀이
+# i = 1
+# count = 0
+# while i <= 50:
+#     time = randrange(5, 51)
+#     if 5 <= time <= 15:
+#         print("[O] {0}번째 손님 (소요시간 : {1}분)".format(i, time))
+#         count += 1
+#     else:
+#         print("[ ] {0}번째 손님 (소요시간 : {1}분)".format(i, time))
+#     i += 1
+
+# print("총 탑승 승객 : {0} 분".format(count))
+
+# # 강의 풀이
+# cnt = 0
+# for i in range(1, 51):
+#     time = randrange(5, 51)
+#     if 5 <= time <= 15:
+#         print("[O] {0}번째 손님 (소요시간 : {1}분)".format(i, time))
+#         cnt += 1
+#     else:
+#         print("[ ] {0}번째 손님 (소요시간 : {1}분)".format(i, time))
+
+# print("총 탑승 승객 : {0} 분".format(count))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
