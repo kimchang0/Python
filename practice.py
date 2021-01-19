@@ -575,6 +575,218 @@
 
 # print("총 탑승 승객 : {0} 분".format(count))
 
+# # 함수(function)
+# def open_account():
+#     print("새로운 계좌가 생성되었습니다.")
+
+# open_account()
+
+# 전달값과 반환값(parameter, return)
+# def deposit(balance, money):
+#     print("입금이 완료되었습니다. 잔액은 {0}원입니다.".format(balance + money))
+#     return balance + money
+
+# def withdraw(balance, money):
+#     if balance >= money:
+#         print("출금이 완료되었습니다. 잔액은 {0}원입니다.".format(balance-money))
+#         return balance - money
+#     else:
+#         print("출금이 완료되지 않았습니다. 잔액은 {0}원입니다.".format(balance))
+#         return balance
+
+# def withdraw_night(balance, money):
+#     commission = 100
+#     return commission, balance - money - commission
+
+# balance = 0
+# balance = deposit(balance, 1000)
+# print(balance)
+# balance = withdraw(balance, 500)
+# print(balance)
+# commission, balance = withdraw_night(balance, 500)
+# print("수수료 {0}원이며, 잔액은 {1}원입니다.".format(commission, balance))
+
+# 기본값
+# def profile(name, age, main_lang):
+#     print("이름 : {0}\t나이: {1}\t주 사용 언어 : {2}"\
+#         .format(name, age, main_lang))
+
+# profile("유재석", 20, "파이썬")
+# profile("김태호", 25, "자바")
+
+# def profile(name, age=17, main_lang="파이썬"):
+#     print("이름 : {0}\t나이: {1}\t주 사용 언어 : {2}"\
+#         .format(name, age, main_lang))
+
+# profile("유재석")
+# profile("김태호")
+
+# 키워드 값
+# def profile(name, age, main_lang):
+#     print(name, age, main_lang)
+
+# profile(name="유재석", main_lang="파이썬", age=20)
+# profile(main_lang="자바", age=20, name="김태호")
+
+# 가변인자
+# def profile(name, age, lang1, lang2, lang3, lang4, lang5):
+#     print("이름 : {0}\t나이 : {1}\t".format(name, age), end=" ")
+#     print(lang1, lang2, lang3, lang4, lang5)
+
+# def profile(name, age, *language):
+#     print("이름 : {0}\t나이 : {1}\t".format(name, age), end=" ")
+#     for lang in language:
+#         print(lang, end=" ")
+#     print()
+
+# profile("유재석", 20, "Python", "Java", "C", "C++", "C#")
+# profile("김태호", 25, "Kotlin", "Swift", "", "", "")
+
+# 지역변수, 전역변수 (전역변수는 코드를 어렵게 만들기 때문에 파라미터로 값을 받고 리턴하는 것이 좋음)
+# gun = 10
+
+# def checkpoint(soldiers):
+#     global gun
+#     gun = gun - soldiers
+#     print("[함수 내] 남은 총 : {0}".format(gun))
+
+# def checkpoint_ret(gun, soldiers):
+#     gun = gun - soldiers
+#     print("[함수 내] 남은 총 : {0}".format(gun))
+#     return gun
+
+# print("전체 총 : {0}".format(gun))
+# checkpoint(2)
+# print("남은 총 : {0}".format(gun))
+
+# print("전체 총 : {0}".format(gun))
+# gun = checkpoint_ret(gun, 2)
+# print("남은 총 : {0}".format(gun))
+
+# 퀴즈
+''' 표준 체중을 구하는 프로그램을 작성하시오.
+*표준 체중 : 각 개인의 키에 적당한 체중
+
+(성별에 따른 공식)
+남자 : 키(m) X 키(m) X 22
+여자 : 키(m) X 키(m) X 21
+
+조건1 : 표준 체중은 별도의 함수 내에서 계산
+            * 함수명 : std_weight
+            * 전달값 : 키(height), 성별(gender)
+조건2 : 표준 체중은 소수점 둘째자리까지 표시
+
+(출력 예제)
+키 175cm 남자의 표준 체중은 67.38kg 입니다.'''
+
+#내 풀이
+# def std_weight(height, gender):
+#     weight = 0
+#     if gender == "남자":
+#         weight = round((height * height * 22) / 10000, 2)
+#     elif gender == "여자":
+#         weight = round((height * height * 21) / 10000, 2)
+#     else:
+#         print("성별이 이상합니다. 성별을 확인해주세요.")
+#     print("키 {0}cm {1}의 표준 체중은 {2}kg 입니다.".format(height, gender, weight)) 
+
+# std_weight(175, "남자")
+
+#강의 풀이
+# def std_weight(height, gender):
+#     if gender == "남자":
+#         return height * height * 22
+#     else:
+#         return height * height * 21
+
+# height = 175
+# gender = "남자"
+# weight = round(std_weight(height / 100, gender), 2)
+# print("키 {0}cm {1}의 표준 체중은 {2}kg 입니다.".format(height, gender, weight)) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
