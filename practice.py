@@ -923,7 +923,7 @@
 #         print("{0} : {1} 방향으로 이동합니다. [속도 {2}]".format(self.name, location, self.speed))
 
 # # 공격유닛
-# class AttackUnit(Unit): # 상속받으려는 클래스를 ()안에 쓰면 상속이 됨
+# class AttackUnit(Unit): # 상속받으려는 클래스를 ()안에 쓰면 상속됨
 #     def __init__(self, name, hp, speed, damage):
 #         # self.name = name
 #         # self.hp = hp
