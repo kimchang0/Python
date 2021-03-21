@@ -1348,8 +1348,13 @@ byme.sign()
 '''
 # import byme
 # byme.sign("이름", "이메일")
-
-
+a = 10
+b = 20
+print("a = ", a)
+print("b = ", b)
+a : b = b
+print("a = ", a)
+print("b = ", b)
 
 
 
