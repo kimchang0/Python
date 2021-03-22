@@ -1348,17 +1348,32 @@ byme.sign()
 '''
 # import byme
 # byme.sign("이름", "이메일")
-a = 10
-b = 20
-print("a = ", a)
-print("b = ", b)
-a : b = b
-print("a = ", a)
-print("b = ", b)
+# a = 10
+# b = 20
+# print("a = ", a)
+# print("b = ", b)
+# a : b = b
+# print("a = ", a)
+# print("b = ", b)
 
+class plus:
+    def __init__(self, first_num, count, increase):
+        self.first_num = first_num
+        self.count = count
+        self.increase = increase
+        print("변수 저장 완료. 초기값 : {0}, 반복횟수 : {1}, 증가값 : {2}".format(self.first_num, self.count, self.increase))
 
+    def plusNum(self):
+        result = self.first_num
+        keyNum = 1
+        while (keyNum <= self.count):
+            result += self.increase
+            keyNum += 1
+            print("result: ", result)
+        print("초기값 : {0}, 반복횟수 : {1}, 증가값 : {2}, 결과값 : {3}".format(self.first_num, self.count, self.increase, result))
 
-
+cacl = plus(3, 150, 7)
+cacl.plusNum()
 
 
 
